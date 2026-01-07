@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f9;
+        }
+        .container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #007BFF;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Medical Premium Prediction Result</h2>
+        <p><strong>Predicted Premium Price:</strong> ₹ {{ Predicted_premium }}</p>
+        <p><strong>Model Accuracy (R² Score):</strong> {{ Accuracy_of_prediction }}%</p>
+        <a href="/prediction" class="btn">Go Back</a>
+    </div>
+</body>
+</html>

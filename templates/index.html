@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Premium Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 450px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Patient Medical Details</h2>
+    <form action="/predict" method="post">
+
+        <label>Age</label>
+        <input type="number" name="Age" placeholder="Enter Age" required>
+
+        <label>Does the patient have Diabetes?</label>
+        <select name="Diabetes" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Any Blood Pressure Problems?</label>
+        <select name="BloodPressureProblems" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Any Organ Transplants?</label>
+        <select name="AnyTransplants" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Any Chronic Diseases?</label>
+        <select name="AnyChronicDiseases" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Height (cm)</label>
+        <input type="number" name="Height" placeholder="e.g. 175" required>
+
+        <label>Weight (kg)</label>
+        <input type="number" name="Weight" placeholder="e.g. 70" required>
+
+        <label>Known Allergies?</label>
+        <select name="KnownAllergies" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>History of Cancer in Family?</label>
+        <select name="HistoryOfCancerInFamily" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label>Number of Major Surgeries</label>
+        <input type="number" name="NumberOfMajorSurgeries" placeholder="0, 1, 2..." required>
+
+        <button type="submit">Predict Premium Price</button>
+    </form>
+</body>
+</html>
